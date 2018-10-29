@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "debug": "node debug app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "include-all": "^4.0.3",
+    "rc": "^1.2.8",
+    "sails": "^0.12.13",
+    "sails-disk": "^0.10.9"
+  }
+}
