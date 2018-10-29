@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#252831">
+  <meta name="Description" content="Read and write reviews about nearby Restaurants!">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="icons/favicon.png">
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="css/styles.min.css" type="text/css">
+  <title>Restaurant Info</title>
+</head>
+
+<body class="inside">
+  <!-- Beginning header -->
+  <header>
+    <!-- Beginning nav -->
+    <nav>
+      <h1><a href="/" alt="Restaurant Reviews">Restaurant Reviews</a></h1>
+    </nav>
+    <!-- Beginning breadcrumb -->
+    <nav id="breadcrumb" role="navigation" aria-label="Breadcrumb"></nav>
+    <!-- End breadcrumb -->
+    <!-- End nav -->
+  </header>
+  <!-- End header -->
+
+  <!-- Beginning main -->
+  <main id="maincontent">
+    <!-- Beginning restaurant -->
+    <section id="restaurant-container">
+      <h1 id="restaurant-name" tabindex="0"></h1>
+      <p id="restaurant-cuisine" tabindex="0"></p>
+      <picture>
+        <source id="restaurant-img-media">
+        <img id="restaurant-img">
+      </picture>
+      <p id="restaurant-address" tabindex="0"></p>
+      <table id="restaurant-hours" tabindex="0"></table>
+    </section>
+    <!-- End restaurant -->
+    <a href="#review-container" class="skip-map" alt="Skip Map">Skip Map</a>
+    <!-- Beginning map -->
+    <section id="map-container" title="Map" aria-label="location" role="application">
+      <div id="map"></div>
+    </section>
+    <!-- End map -->
+    <!-- Add review form -->
+    <section id="review-container">
+      <h2 tabindex="0">Add Review</h2>
+      <form id="review-form" action="">
+        <div class="review-item">
+          <label for="review-name" class="review-item__label">Name</label>
+          <input id="review-name" type="text" aria-label="Reviewers Name" name="name" required>
+        </div>
+
+        <div class="review-item">
+          <label for="rating" class="review-item__label">Rating</label>
+          <select id= "rating" name="rating" aria-label="Rating select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <div class="review-item">
+          <label for="review-comments" class="review-item__label">Review</label>
+          <textarea id="review-comments" name="comments" rows="8" cols="20" aria-label="Comments" required></textarea>
+        </div>
+
+        <div class="review-item">
+          <button class="review-item__submit" aria-label="Submit Review" id="review-submit" onclick="addReview()">Submit</button>
+        </div>
+      </form>
+    </section>
+    <!-- End review form -->
+    <!-- Beginning reviews -->
+    <section id="reviews-container">
+      <ul id="reviews-list"></ul>
+    </section>
+    <!-- End reviews -->
+  </main>
+  <!-- End main -->
+
+  <!-- Beginning footer -->
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/" alt="Restaurant Reviews"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  <!-- End footer -->
+  <!-- Beginning scripts -->
+  <script type="application/javascript" charset="utf-8" src="js/rest.js"></script>
+  <!-- Maps -->
+  <script defer src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+  <!-- End scripts -->
+</body>
+</html>
